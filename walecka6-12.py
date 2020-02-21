@@ -42,10 +42,10 @@ for n in range(0,160):
 			break
 NZ = []
 ZZ = []
-for n in range(0,160):
-	for z in range(1,118):
+for z in range(1,118):
+	for n in range(0,160):
 	#check for fixed N where pdrip(N,Z) = 0
-		if(pdrip(n,z) < 0.01):
+		if(pdrip(n,z) < 0.000000001):
 			NZ.append(n)
 			ZZ.append(z)
 			break
