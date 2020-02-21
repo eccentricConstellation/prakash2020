@@ -4,6 +4,7 @@
 
 import numpy as np 
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 
 a1 = 15.75
 a2 = 17.8
@@ -54,8 +55,12 @@ fig1 = plt.figure()
 plt.plot(N, Z, 'r--') 
 plt.plot(NN, ZN, 'b--')
 plt.plot(NZ, ZZ, 'g--')
-plt.title('Line of Stability')
+plt.title('Valley of Stability')
+plt.axis([0, 170, 0, 120])
 plt.xlabel('N')
 plt.ylabel('Z')
+red_p = mpatches.Patch(color='red', label='Line of stability')
+blue_p = mpatches.Patch(color='blue', label='Neutron drip line')
+green_p = mpatches.Patch(color='green', label='Proton drip line')
+plt.legend(handles=[red_p, blue_p, green_p])
 plt.show() 
-
