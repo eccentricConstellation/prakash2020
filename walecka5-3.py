@@ -31,9 +31,8 @@ integration = np.trapz(U[:,0],x)
 # plot results
 plt.plot(x,U[:,0])
 #plt.plot(x,u[:,1],'k-.')
-plt.xlim(0,12)
 plt.xticks(np.arange(0, 12.1, step=1))
-plt.ylim(0,1.0)
+plt.axis([0, 12, 0, 1.0])
 plt.title("SOLUTION TO THOMAS-FERMI EQUATION")
 plt.xlabel('Distance x')
 plt.ylabel('Thomas Fermi function chi(x)')
@@ -41,4 +40,9 @@ plt.show()
 #{:.1f}".format(x)?
 print(tabulate({"x": x,"Chi(x)": U[:,0]}, headers="keys"))
 print(tabulate({"x": x,"Chi'(x)": U[:,1]}, headers="keys"))
-
+# i2 = integration on [0,infinity] of (chi'(x))**2dx
+chip2 = U[:,1]
+for i in range(0,len(chip2)):
+	chip2[i] = (chip2[i])**2
+i2 = np.trapz(chip2,x)
+print("\ni2 yields:",i2)
