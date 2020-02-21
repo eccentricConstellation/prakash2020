@@ -1,0 +1,7 @@
+R*gamma = 0.4627443681192471
+solving xcotx + gamma*R = 0, we find x to be 1.8198000000034544
+the first solution for V0 is 36.55349478052127 MeV
+coefficients for radial wavefunction:
+A = 0.5624530498735132 
+C = 0.8658614055444437
+integration from 0 to R of the probability density is  0.3548966140327295
