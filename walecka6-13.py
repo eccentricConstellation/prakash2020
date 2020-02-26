@@ -1,6 +1,6 @@
 # walecka6-13.py
 # Emma Rice
-# 2/19/2020
+# 2/25/2020
 
 import numpy as np 
 import matplotlib.pyplot as plt
